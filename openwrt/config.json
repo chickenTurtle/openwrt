@@ -1,0 +1,25 @@
+{
+  "name": "OpenWRT",
+  "version": "0.0.1",
+  "slug": "openwrt",
+  "description": "Adds support for device tracking with ubus openwrt inteno",
+  "url": "https://github.com/chickenTurtle/openwrt",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "host_network": true,
+  "host_dbus": true,
+  "apparmor": false,
+  "options": {
+    "routerIp": "ws://192.168.1.1",
+    "username": "user",
+    "password": "",
+    "logLevel": "info"
+  },
+  "schema": {
+    "routerIp": "str",
+    "username": "str",
+    "password": "str",
+    "logLevel": "list(error|warn|info|debug|verbose|silly)"
+  }
+}
